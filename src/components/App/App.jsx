@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react';
+import Grid from 'react-bootstrap/lib/Grid';
+import Header from '../Header';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -7,7 +9,10 @@ const propTypes = {
 function App({ children = null }) {
   return (
     <div>
-      {children}
+      <Header />
+      <Grid>
+        {children}
+      </Grid>
     </div>
   );
 }

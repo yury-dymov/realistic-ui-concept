@@ -13,7 +13,7 @@ function Post({ id, text }) {
         {text}
       </div>
       <div className="like-block">
-        <Like id={id} />
+        <Like id={id} description={`I toggled like button for the post "[url="/#like-${id}"]${text}[/url]"`} />
       </div>
     </div>
   );

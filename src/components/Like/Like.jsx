@@ -7,22 +7,28 @@ import { testCall } from '../../redux/actions/test';
 
 const propTypes = {
   id: PropTypes.number.isRequired,
+  description: PropTypes.node,
   dispatch: PropTypes.func,
   error: PropTypes.string,
   loading: PropTypes.bool,
   value: PropTypes.number,
 };
 
-function Like({ id, dispatch, loading, value, error = null }) {
+function Like({ id, dispatch, loading, value, description = '', error = null }) {
   const icon = value === 1 ? <LikedIcon /> : <LikeIcon />;
 
   function like() {
-    dispatch(testCall(id));
+    dispatch(testCall(id, description));
   }
 
   return (
-    <div>
-      <Button icon={icon} loading={loading} onClick={like} />
+    <div id={`like-${id}`}>
+      <Button
+        icon={icon}
+        loading={loading}
+        onClick={like}
+        spinColor="#666"
+      />
       { error && <span className="error">{error}</span>}
     </div>
   );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Post from '../Post';
 
 const posts = [
@@ -13,8 +12,7 @@ function PageOne() {
 
   return (
     <div>
-      <Link to={"/#like-1"}>Here</Link>
-      <div style={{marginTop: '800px'}}>
+      <div>
         {postWidgets}
       </div>
     </div>
