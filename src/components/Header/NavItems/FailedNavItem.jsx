@@ -51,9 +51,9 @@ function mapStateToProps(state) {
   requests.sort((a, b) => b.timestamp - a.timestamp);
 
   return {
-    error: (requests || []).filter(r => r.status === 2).length, 
+    error: (requests || []).filter(r => r.status === 2).length,
     requests: requests.slice(0, 5),
-   };
+  };
 }
 
 export default connect(mapStateToProps)(LoadingNavItem);

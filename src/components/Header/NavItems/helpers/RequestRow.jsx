@@ -15,6 +15,7 @@ import { requestClear, requestReplay } from '../../../../redux/actions/request';
 
 const propTypes = {
   description: PropTypes.node.isRequired,
+  id: PropTypes.number.isRequired,
   status: PropTypes.number.isRequired,
   timestamp: PropTypes.number.isRequired,
   dispatch: PropTypes.func,
@@ -23,6 +24,7 @@ const propTypes = {
 function RequestRow({
   description,
   dispatch,
+  id,
   timestamp,
   status,
 }) {
@@ -35,7 +37,7 @@ function RequestRow({
   }
 
   return (
-    <LinkContainer to="/#link-2" active={false}>
+    <LinkContainer to={`/#link-${id}`} active={false}>
       <MenuItem role="menuitem">
         <span className="request-row-description">
           {description.replace(/\[url="(.*?)"](.*?)\[\/url]/, '$2')}

@@ -22,7 +22,8 @@ const routes = (
   <Router history={browserHistory} onUpdate={hashLinkScroll}>
     <Route component={App} path="/">
       <IndexRoute component={PageOne} />
-      <Route component={PageTwo} path="/second-page" />
+      <Route path="/second-page" component={PageTwo} />
+      <Route path="*" component={PageOne} />
     </Route>
   </Router>
 );

@@ -27,7 +27,7 @@ function LoadingNavItem({ active = 0, requests = [] }) {
           <FaSpin className={classnames('faa-spin', active > 0 ? 'animated' : null)} />
           {active > 0 && <Badge style={{ marginLeft: '5px' }} >{active}</Badge>}
         </span>
-      }      
+      }
     >
       {menuItems}
     </NavDropdown>
