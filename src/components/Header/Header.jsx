@@ -36,7 +36,7 @@ function Header({ page }) {
           <LoadingNavItem />
           <FailedNavItem />
           <NavItem href="https://github.com/yury-dymov/realistic-ui-concept">
-            <FaGitHub size={22}/>
+            <FaGitHub size={22} />
           </NavItem>
         </Nav>
       </Navbar.Collapse>
@@ -47,5 +47,7 @@ function Header({ page }) {
 function mapStateToProps({ readme }) {
   return { page: readme.page || 0 };
 }
+
+Header.propTypes = propTypes;
 
 export default connect(mapStateToProps)(Header);

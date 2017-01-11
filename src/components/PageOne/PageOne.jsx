@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Button from 'react-bootstrap/lib/Button';
 import PageHeader from 'react-bootstrap/lib/PageHeader';
-import Well from 'react-bootstrap/lib/Well';
 import ReadMeOne from './helpers/ReadMeOne';
 import ReadMeTwo from './helpers/ReadMeTwo';
 import Post from '../Post';

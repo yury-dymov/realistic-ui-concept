@@ -6978,3 +6978,15 @@ button.close {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+.request-row-description > a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover > span > a,
+.dropdown-menu > li > a:hover > span > a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2fa4e7;
+}
