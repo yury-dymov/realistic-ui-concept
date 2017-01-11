@@ -18,7 +18,7 @@ Realistic UI is a brand new way to represent the interaction with the backend. I
 2. UI component, which helps to track active and finished requests. With the help of this widget, the user can always navigate back to the relevant page and/or part of the page to review input and progress.
 3. UI component, which provides information regarding failed requests. The user can decide, whatever he or she would prefer to do: ignore the error, navigate back to the relevant page or replay the failing action.
 
-# Realistic UI vs, Optimistic UI
+# Realistic UI vs. Optimistic UI
 Optimistic UI is a concept, which suggests updating the UI in a such away as we would do in case the remote operation is successfully executed.
 
 I am currently writing an article, which explains the downsides of the Optimistic UI concept in greater details. Main concerns are following:
