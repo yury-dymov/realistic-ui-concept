@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
+import FaGitHub from 'react-icons/lib/fa/github';
 import FailedNavItem from './NavItems/FailedNavItem';
 import LoadingNavItem from './NavItems/LoadingNavItem';
 
-function Header() {
+const propTypes = {
+  page: PropTypes.number,
+};
+
+function Header({ page }) {
   return (
-    <Navbar>
+    <Navbar fixedTop>
       <Navbar.Header>
         <Navbar.Brand>
           <Link to="/">
@@ -20,17 +26,26 @@ function Header() {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav navbar>
-          <LinkContainer to="/second-page">
-            <NavItem eventKey={1}>Page Two</NavItem>
-          </LinkContainer>
+          {page > 0 &&
+            <LinkContainer to="/second-page">
+              <NavItem eventKey={1}>Page Two</NavItem>
+            </LinkContainer>
+          }
         </Nav>
         <Nav navbar pullRight>
           <LoadingNavItem />
           <FailedNavItem />
+          <NavItem href="https://github.com/yury-dymov/realistic-ui-concept">
+            <FaGitHub size={22}/>
+          </NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
   );
 }
 
-export default Header;
+function mapStateToProps({ readme }) {
+  return { page: readme.page || 0 };
+}
+
+export default connect(mapStateToProps)(Header);

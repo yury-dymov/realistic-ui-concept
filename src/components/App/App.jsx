@@ -10,7 +10,7 @@ function App({ children = null }) {
   return (
     <div>
       <Header />
-      <Grid>
+      <Grid className="content">
         {children}
       </Grid>
     </div>

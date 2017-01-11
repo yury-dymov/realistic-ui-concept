@@ -3,7 +3,7 @@ import Like from '../Like';
 
 const propTypes = {
   id: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.any.isRequired,
 };
 
 function Post({ id, text }) {

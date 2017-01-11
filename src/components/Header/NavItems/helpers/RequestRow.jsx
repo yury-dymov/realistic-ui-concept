@@ -37,7 +37,7 @@ function RequestRow({
   }
 
   return (
-    <LinkContainer to={`/#link-${id}`} active={false}>
+    <LinkContainer to={`/#like-${id}`} active={false}>
       <MenuItem role="menuitem">
         <span className="request-row-description">
           {description.replace(/\[url="(.*?)"](.*?)\[\/url]/, '$2')}
