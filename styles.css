@@ -6990,3 +6990,23 @@ button.close {
   color: #ffffff;
   background-color: #2fa4e7;
 }
+
+.dropdown-menu > li {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.dropdown-menu > li:hover,
+.dropdown-menu > li:focus {
+  text-decoration: none;
+  background-color: #2fa4e7;
+}
+
+.dropdown-menu > li:hover a,
+.dropdown-menu > li:focus a {
+  color: #ffffff;
+}
