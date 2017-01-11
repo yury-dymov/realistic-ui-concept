@@ -36,11 +36,21 @@ function RequestRow({
     dispatch(requestReplay(description));
   }
 
+  function showMessage() {
+    const msg = description.replace(/\[url="(.*?)"](.*?)\[\/url]/, '$2');
+
+    if (msg.length > 100) {
+      return `${msg.slice(0, 97)}...`;
+    }
+
+    return msg;
+  }
+
   return (
-    <MenuItem role="menuitem">
+    <li>
       <span className="request-row-description">
         <Link to={`/#like-${id}`}>
-          {description.replace(/\[url="(.*?)"](.*?)\[\/url]/, '$2')}
+          {showMessage()}
         </Link>
       </span>
       <span className="request-right-block">
@@ -54,7 +64,7 @@ function RequestRow({
           {status !== 0 && <Button onClick={clearRow} title="clear"><FaEraser /></Button>}
         </span>
       </span>
-    </MenuItem>
+    </li>
   );
 }
 
