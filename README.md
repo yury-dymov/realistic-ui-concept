@@ -21,13 +21,16 @@ Realistic UI is a brand new way to represent the interaction with the backend. I
 # Realistic UI vs. Optimistic UI
 Optimistic UI is a concept, which suggests updating the UI in a such away as we would do in case the remote operation is successfully executed.
 
-I am currently writing an article, which explains the downsides of the Optimistic UI concept in greater details. Main concerns are following:
+Main downsides of Optimistic UI are following:
 
 * You can't use Optimistic UI everywhere. Obviously, there are some critical parts of the application, where we can't trick the user and want to be 100% certain if an operation was successful or not. You can imagine buying cinema tickets scenario.
 * Not only you have to maintain two different UI models of interacting with the backend "important" and "not important," but you might also mislead your user.
 * Dividing scenarios into "important" and "not important" is subjective. For you lost "like" might be not an issue, but for other people, it might be very important thing, which might even ruin somebody's evening
 * Imagine the offline scenario. User made five different actions, and after your application got access to the Internet, action #3 is failed. What shall we do? Rollback first two actions? Try to execute actions #4 and #5? But what if they are relying on action #3? How would you show the user these errors? There are too many questions and no simple answers. I personally try to avoid using things, which brings a lot more problems compared to the value they provide
 * Tricking user, in general, is not a good idea
+
+More detailed in Russian — [HabraHabr](https://habrahabr.ru/post/319392/)
+More detailed in English — currently under review
 
 # Installing This App Locally
 ```Bash
